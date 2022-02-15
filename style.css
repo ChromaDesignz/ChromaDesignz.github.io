@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    scroll-behavior: smooth;
+}
+::placeholder {
+    color: white;
+    opacity: 1; /* Firefox */
+}
+
+/* Preloader */
+
+.loader-container{
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+}
+.loadingspinner {
+	pointer-events: none;
+	width: 3.5em;
+	height: 3.5em;
+	border: 0.5em solid transparent;
+	border-color: #eee;
+	border-top-color: #3E67EC;
+	border-radius: 50%;
+	animation: loadingspin 1s linear infinite;
+}
+
+@keyframes loadingspin {
+	100% {
+			transform: rotate(360deg)
+	}
+}
+
+
+/* --------- nav bar ---------  */
+
+.navbar{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+}
+.logo{
+    font-size: 2.5vh;
+    padding: 25px 20px;
+    text-decoration: none;
+    color: #313131;
+    font-weight: 600;
+}
+#menu{
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    transition: 0.5s;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    top: -100vh;
+}
+#menu.active{
+    top: 0;
+}
+#menu ul{
+    list-style: none;
+}
+#menu ul li{
+    padding: 25px;
+    text-align: center;
+}
+#menu ul li a{
+    font-weight: 600;
+    text-decoration: none;
+    color: #313131;
+}
+#menu-btn{
+    padding: 20px;
+}
+#menu-btn i{
+    cursor: pointer;
+    font-size: 4.5vh;
+    color: #313131;
+}
+#close-btn{
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    cursor: pointer;
+    font-size: 30px;
+    color: #313131;
+}
+
+/* ------- home section -------  */
+
+#home{
+    width: 100%;
+    height: 100vh;
+    background: url(images/1294117.png) center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+.main-text{
+    text-align: center;
+}
+.main-text .top{
+    font-size: 1vw;
+    line-height: 1px;
+    font-weight: 600;
+}
+.main-text h1{
+    letter-spacing: 3px;
+    color: #313131;
+    font-size: 3.8vw;
+    transition: all 0.5s ease !important;
+}
+.main-text h1:hover{
+    letter-spacing: 10px;
+}
+.main-text p{
+    font-size: 1vw;
+    font-weight: 600;
+}
+
+/* ------ about me section -------- */
+
+.about-contents{
+    padding: 3vh 0 60px 0;
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+#about-me h1{
+    font-family: 'Raleway', sans-serif;
+    font-size: 4vh;
+    text-align: center;
+    margin: 100px 0 0 0;
+    color: #313131;
+    font-weight: 800;
+}
+.left{
+    display: flex;
+    align-items: center;
+    padding: 5vh;
+    width: 30%;
+}
+.left img{
+    border-radius: 50%;
+    width: 100%;
+}
+.right{
+    padding-top: 40px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.right p{
+    font-size: 2.2vh;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    color: #313131;
+    line-height: 25px;
+}
+.right p span{
+    font-weight: 700;
+}
+.right i{
+    padding: 0 10px 10px 0 ;
+    color:#5b6bd3;
+}
+.info{
+    font-size: 2vh;
+    font-weight: 600;
+    padding: 20px 0 0 0;
+}
+.info a{
+    text-decoration: none;
+    color: #313131;
+    padding-left: 6px;
+}
+.age span{
+    font-size: 15px;
+    padding-left: 6px;
+}
+
+/* ------- project and skills section -------- */
+
+.projects-skills{
+    display: flex;
+    justify-content: space-evenly;
+    min-height: 40vh;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 70px;
+    padding: 10px 0 10px 0;
+}
+.project-counter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    margin: 50px 0 19px 0;
+}
+.project-counter h2{
+    font-size: 35px;
+    margin-top: 26px;
+    color: #313131;
+    margin-left: -15px;
+}
+.project-counter p{
+    margin: 40px;
+    font-size: 2.5vh;
+    font-weight: bold;
+}
+.project-counter i{
+    color:#5b6bd3;
+    font-size: 50px;
+}
+.counter{
+    padding: 15px;
+    font-size: 30px;
+    color: #313131;
+}
+.skills,
+.projects{
+    width: 30%;
+    height: 55%;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 20px 20px 20px;
+}
+.projects{
+    color: #313131;
+    text-align: center;
+}
+.skills h2{
+    color: #313131;
+    text-align: center;
+}
+.progress-bar-border{
+    margin: 10px 0 30px 0;
+    width: 100%;
+    height: 10px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #f0f0f0;
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.05), 0px 1px rgba(255,255,255,0.8);
+    z-index: -1;
+    position: relative;
+}
+.progress-bar{
+    width: 40%;
+    background: #6665ee;
+    height: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.bar-info span{
+    font-size: 2vh;
+    font-weight: 600;
+}
+@keyframes animate {
+    100%{
+        transform: scaleX(1);
+    }
+}
+.bar{
+    padding-top: 20px;
+}
+.html{
+    width: 65%;
+}
+.css{
+    width: 40%;
+}
+.javascript{
+    width: 30%;
+}
+.designing{
+    width: 50%;
+}
+
+/* ------- contact -------  */
+
+#contact{
+    width: 100%;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form{
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.form-items{
+    padding: 5%;
+    width: 50%;
+    min-height: 100%;
+}
+.form-items h1{
+    color: #5b6bd3;
+    font-size: 3vh;
+  }
+.contact-title{
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1;
+    margin-bottom: 0.7rem;
+}
+.input-container{
+    margin: 1rem 0;
+}
+.input{
+    width: 100%;
+    border: 2px solid #fafafa;
+    padding: 0.6rem 1.2rem;
+    outline: none;
+    background: none;
+    color: #fff;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+textarea.input{
+    padding: 0.8rem 1.2rem;
+    min-height: 150px;
+    border-radius: 10px;
+    resize: none;
+    overflow-y: auto;
+}
+.btn{
+    padding: 0.6rem 1.3rem;
+    background-color: #fff;
+    font-size: 0.95rem;
+    color: #273ab0;
+    border: 2px solid #fafafa;
+    line-height: 1;
+    border-radius: 8px;
+    outline: none;
+    margin: 0;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: transparent;
+    color: #fff;
+}
+.contact-info{
+    padding: 2.3rem 2.2rem;
+    position: relative;
+}
+.contact-info h3{
+    color: #5b6bd3;
+}
+.text{
+    color: #333;
+    margin: 1.5rem 0 2rem 0;
+    font-size: 2.5vh;
+    font-weight: 600;
+}
+.information{
+    color: #555;
+    margin: 0.7rem 0;
+    display: flex;
+    text-align: center;
+    margin-left: -30px;
+}
+.information i{
+    color: #5b6bd3;
+    font-size: 5vh;
+    padding: 20px 0 20px 0;
+}
+.information p{
+    font-size: 2.5vh;
+font-weight: bold;
+
+}
+
+/* -------- footer -------- */
+
+footer{
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+}
+footer h1{
+    padding: 17px;
+    font-size: 23px;
+    color: #313131;
+}
+footer h2{
+    padding-bottom: 10px;
+    font-size: 15px;
+    color: #313131;
+}
+.footer-icons{
+    padding-bottom: 18px;
+    display: flex;
+    justify-content: center;
+}
+.footer-icons a{
+    text-decoration: none;
+    color: #313131;
+    font-size: 15px;
+    padding: 8px;
+}
+footer p{
+    font-size: 12px;
+    color: #313131;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+
+/* ---- responsive media ----  */
+
+  /* ------ nav bar ------  */
+
+  @media(max-width: 850px){
+
+    /* ----- navbar -----  */
+
+    #menu-btn i {
+        font-size: 30px;
+    }
+    .logo {
+        font-size: 15px;
+    }
+
+    /* ------- home ------  */
+
+    .main-text .top {
+        font-size: 15px;
+      }
+    .main-text h1 {
+        font-size: 50px;
+    }
+    .main-text p{
+        font-size: 15px;
+        line-height: 6px;
+    }
+    .social-icons a {
+        font-size: 18px;
+    }
+    
+    /* -------about me ------  */
+    
+    .about-contents{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    #about-me h1{
+        padding: 30px 0 0 0;
+        font-size: 30px;
+    }
+    .left{
+        padding: 25px;
+        width: 90%;
+    }
+    .right{
+        padding: 0 30px;
+        width: 100%;
+    }
+    .right p{
+        font-size: 16px;
+        text-align: center;
+    }
+    .info {
+        font-size: 15px;
+        font-weight: 600;
+        padding: 35px 0 0 0;
+      }
+
+    /* ----- skills -----  */
+
+    .projects-skills {
+        flex-direction: column;
+        min-height: 100vh;
+        align-items: center;
+    }
+    .skills, .projects {
+        min-width: 75vw;
+        min-height: 50%;
+        margin-bottom: 50px;
+    }
+    .skills{
+        min-height: 55%;
+    }
+    .bar-info span{
+        font-size: 15px;
+        font-weight: 600;
+    }
+    /* ------ contact section ------  */
+
+    .form{
+        min-height: 69vh;
+        flex-direction: column;
+        margin: 50px;
+    }
+    .form-items {
+        width: 100%;
+    }
+    .information {
+        margin-left: 0;
+        flex-direction: column;
+    }
+}
